@@ -3,19 +3,30 @@
     <head>
         <meta charset = "utf-8">
         <link rel = "stylesheet" href = "styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Fredoka:wght@300..700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
         <script src = "index.js" defer></script>
         <title>Weather</title>
     </head>
     <body>
+        <form class = "form">
+            <label for = "text-box">Search for a city:</label>
+            <input type = "text" id = "text-box" name = "text-box">
+            <input type = "submit" value = "Search" id = "submit-bttn">
+        </form>
         <div class = "local-weather-div">
             <div class = "local-location"></div>
             <div class = "local-temp"></div>
             <div class = "local-desc"></div>
+            <div class = "humidity-desc"></div>
             <div class = "local-humidity"></div>
+            <div class = "uv-desc"></div>
             <div class = "local-uv"></div>
+            <div class = "wind-desc"></div>
             <div class = "local-wind"></div>
+            <div class = "wind-dir-desc"></div>
             <div class = "local-wind-dir"></div>
         </div>
-        <div class = "input-weather">Loading</div>
     </body>
 </html>

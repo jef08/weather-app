@@ -1,80 +1,170 @@
+body {
+    background-color: navy;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Fredoka";
+    letter-spacing: 1px;
+    color: white;
+    width: 25vw;
+    max-width: 300px;
+    gap: 3px;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+#submit-bttn {
+    width: 90px;
+    height: 25px;
+    margin-top: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgba(255, 255, 255, 0.267);
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.267);
+}
+
+#submit-bttn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.267);
+    color:rgba(255, 255, 255, 0.76);
+}
+
+#text-box {
+    background-color: rgba(255, 255, 255, 0.267);
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    height: 25px;
+    padding-left: 3px;
+}
+
+#text-box:focus {
+    outline: none;
+}
+
 .local-weather-div {
     height: 40vh;
     width: 50vw;
     max-width: 500px;
-    background-color: aqua;
+    background-color: transparent;
+    padding: 1vh 1vw;
+    border-radius: 7px;
     display: grid;
-    grid-template: 18% 36% 10% 18% 18% / 50% 50%;  
+    grid-template: 18% 33% 13% 8% 10% 8% 10% / 50% 50%;  
+    position: absolute;
+    top: 25%;
+    left: 30%;
 }
 
 .local-location {
     grid-column: 1/3;
     grid-row: 1/2;
-    background-color: blue;
     font-size: clamp(10px, 3vw, 40px);
     overflow: visible;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-bottom-style: solid;
 }
 
 .local-temp {
     grid-column: 1/3;
     grid-row: 2/3;
-    background-color: brown;
-    font-size: 10vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: clamp(10px, 10vw, 120px);
 }
 
 .local-desc {
     grid-column: 1/3;
     grid-row: 3/4;
-    background-color: yellow;
-    font-size: 2.5vw;
+    font-size: clamp(10px, 2.5vw, 35px);
+    background-color: transparent;
+    color: white;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    font-family: "Fredoka";
+}
+
+.humidity-desc {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-items: center;
 }
 
 .local-humidity {    
     grid-column: 1/2;
+    grid-row: 5/6;
+    align-items: flex-start;
+}
+
+.uv-desc {
+    grid-column: 2/3;
     grid-row: 4/5;
-    background-color: green;
-    font-size: 3vw;
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .local-uv {
     grid-column: 2/3;
-    grid-row: 4/5;
-    background-color: orange;
-    font-size: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-row: 5/6;
+    align-items: flex-start;
+}
+
+.wind-desc {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    align-items: flex-end;
 }
 
 .local-wind {
     grid-column: 1/2;
-    grid-row: 5/6;
-    background-color: gray;
-    font-size: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-row: 7/8;
+    align-items: flex-end;
+}
+
+.wind-dir-desc {
+    grid-column: 2/3;
+    grid-row: 6/7;
+    align-items: flex-end;
 }
 
 .local-wind-dir {
     grid-column: 2/3;
-    grid-row: 5/6;
-    background-color: white;
-    font-size: 3vw;
+    grid-row: 7/8;
+    align-items: flex-end;
+}
+
+.local-location,
+.local-temp {
+    background-color: transparent;
+    color:white;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Fredoka";
+}
+
+.local-humidity,
+.local-uv,
+.local-wind,
+.local-wind-dir,
+.humidity-desc,
+.uv-desc,
+.wind-desc,
+.wind-dir-desc {
+    background-color: transparent;
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-family: "Fredoka";
+    font-size: clamp(10px, 3.5vw, 40px);
+}
+
+.humidity-desc,
+.uv-desc,
+.wind-desc,
+.wind-dir-desc {
+    font-size: clamp(8px, 1.5vw, 20px);
+    letter-spacing: 2px;
 }
